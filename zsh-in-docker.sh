@@ -63,7 +63,7 @@ install_dependencies() {
 
     case $DIST in
         alpine)
-            $Sudo apk add --update --no-cache git curl zsh
+            $Sudo nix-env -i git curl zsh
         ;;
         centos | amzn)
             $Sudo yum update -y
